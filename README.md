@@ -18,7 +18,7 @@ into
 
 ```.env```
 
-and fill variables with proper content.
+and fill variables with the proper content.
 
 
 ## Features
