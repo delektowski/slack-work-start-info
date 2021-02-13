@@ -7,7 +7,7 @@ GET_TEXT(){
   START_TIME=$(date +"%H:%M")
   END_TIME=$(date -v+8H +"%H:%M" )
   BREAK_TIME=$(date -v+4H +"%H:%M" )
-  TEXT="Hej! Dziś zaczynam od: $START_TIME, a kończę o: $END_TIME; Przerwa ok.: $BREAK_TIME \\n Cytat na dziś: 'kokos' "
+  QUOTE=$(curl -v  -i -X GET http://quotes.rest/qod.json\?category\=inspire | sed -n '/ *"quote": *"/ { s///; s/".*//; p; }') &&  TEXT="Hej! Dziś zaczynam od: $START_TIME, a kończę o: $END_TIME; Przerwa ok.: $BREAK_TIME \\n Cytat na dziś: '$QUOTE' "
   echo "$TEXT"
 }
 
