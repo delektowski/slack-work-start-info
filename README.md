@@ -18,6 +18,10 @@ into
 
 ```.env```
 
+!IMPORTANT FOR LINUX!
+
+Change ```-v+8H``` to ```-d '+4 hour'```
+
 and fill variables with the proper content.
 
 

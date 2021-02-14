@@ -4,6 +4,7 @@ IMG_URL=$(grep IMG_URL .env | cut -d '=' -f2)
 SLACK_WEBHOOK=$(grep SLACK_WEBHOOK .env | cut -d '=' -f2)
 
 GET_TEXT() {
+
   START_TIME=$(date +"%H:%M")
   END_TIME=$(date -v+8H +"%H:%M")
   BREAK_TIME=$(date -v+4H +"%H:%M")
@@ -17,4 +18,4 @@ GET_TEXT() {
   echo "$TEXT"
 }
 
-curl -X POST --data-urlencode "payload={\"channel\": $CHANNEL, \"username\": $USER_NAME, \"text\": \"$(GET_TEXT)\", \"icon_url\": $IMG_URL}" "$SLACK_WEBHOOK"
+curl -X POST --data-urlencode "payload={\"channel\": $CHANNEL, \"username\": $USER_NAME, \"text\": \"$(GET_TEXT)\", \"icon_url\": $IMG_URL}" $SLACK_WEBHOOK
