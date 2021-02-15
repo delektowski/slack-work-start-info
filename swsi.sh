@@ -15,7 +15,7 @@ GET_TEXT() {
     if [ -z "$QUOTE" ]; then
       TEXT="Hej! Dziś zaczynam od: $START_TIME, a kończę o: $END_TIME; Przerwa ok.: $BREAK_TIME"
     else
-      TEXT="Hej! Dziś zaczynam od: $START_TIME, a kończę o: $END_TIME; Przerwa ok.: $BREAK_TIME \\n Cytat na dziś: '$QUOTE' "
+      TEXT="Hej! Dziś zaczynam od: $START_TIME, a kończę o: $END_TIME; Przerwa ok.: $BREAK_TIME \\n Toast na dziś: '$QUOTE' "
     fi
 
   echo "$TEXT"
