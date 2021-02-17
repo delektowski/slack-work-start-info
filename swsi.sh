@@ -25,7 +25,7 @@ GET_TEXT() {
   if [ -z "$INGREDIENTS" ]; then
     TEXT="Dziś zaczynam od: $START_TIME, a kończę o: $END_TIME; Przerwa ok.: $BREAK_TIME"
   else
-    TEXT="Hej! Dziś *zaczynam od:* <$START_TIME>, a *kończę o:* $END_TIME; *Przerwa ok.:* $BREAK_TIME \\n *Drink na dziś:* $DRINK_NAME \\n *Składniki:* $(echo $INGREDIENTS | sed 's/.$//')  \\n *Instrukcja przyrządzenia:* $(echo $INSTRUCTIONS | sed 's/.$//') "
+    TEXT="Hej! Dziś *zaczynam od:* $START_TIME, a *kończę o:* $END_TIME; *Przerwa ok.:* $BREAK_TIME \\n *Today's Drink Of The Day:* $DRINK_NAME \\n *Ingredients:* $(echo $INGREDIENTS | sed 's/.$//')  \\n *Instruction:* $(echo $INSTRUCTIONS | sed 's/.$//') "
   fi
 
   echo "$TEXT"

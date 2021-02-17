@@ -1,5 +1,5 @@
 ## General info
-A script for announcing the start and finish working hours on a slack channel.
+A script for announcing the start and finish working hours on a slack channel with random drink recipe.
 
 ## Technologies
 * Bash
@@ -29,7 +29,7 @@ Change ```-v+8H``` to ```-d '+4 hour'```
 
 ## Features
 * announcing start and finish working hours on a Slack channel
-* showing a random quote from an external API
+* showing a random drink recipe and image
 
 ## Contact
 Created by [Marcin Delektowski](mailto:marcin.delektowski@gmail.com) - feel free to contact me!
